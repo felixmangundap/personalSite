@@ -63,16 +63,10 @@ a {
 
 /* Basic Component */
 
-@media (min-width: 768px) {
-  .container {
-      width: 750px;
-      margin-right: auto;
-      margin-left: auto;
-  }
-}
-
 @media (min-width: 992px) {
   .container {
+      margin-right: auto;
+      margin-left: auto;
       width: 970px;
   }
 }
