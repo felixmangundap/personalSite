@@ -2,7 +2,7 @@ import React from 'react'
 import AwesomeDebouncePromise from 'awesome-debounce-promise';
 
 // ES6 Imports
-import { Link, Element, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
+import { Link, Element } from 'react-scroll';
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
