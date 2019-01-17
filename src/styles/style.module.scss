@@ -102,6 +102,11 @@ a {
   text-transform: lowercase;
   padding: 10px 15px;
   cursor: pointer;
+
+  @media (max-width: 767px) {
+    right: 25px;
+    bottom: 25px;
+  }
 }
 
 /* Layer */
