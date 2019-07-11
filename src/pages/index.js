@@ -17,8 +17,9 @@ import * as style from  '../styles/style.module.scss'
 
 class IndexPage extends React.Component {
   state = {
+    darkMode: false,
     nextPage: 'layer-2',
-    nextText: 'Next Page'
+    nextText: 'Next Page',
   }
 
   componentDidMount() {
@@ -34,28 +35,41 @@ class IndexPage extends React.Component {
     }, 100));
   }
 
+  toggleDarkMode = () => {
+    this.setState({ darkMode: true });
+  }
+
+  toggleLightMode = () => {
+    this.setState({ darkMode: false });
+  }
+
   render() {
-    const { nextPage, nextText } = this.state;
+    const { darkMode, nextPage, nextText } = this.state;
 
     return (
       <Layout>
         <SEO title="My Portfolio" keywords={[`Fransiskus Felix Mangundap`, `Felix Mangundap`, `Felix`, 'Waterloo']} />
         <a href='/'><img src={logo} className={style.logo} alt='logo' /></a>
+        <div className={style.modeToggle}>
+          <a onClick={this.toggleLightMode} className={`${style.mode} ${darkMode ? null : style.modeSelected}`}>light side</a>
+          <p className={style.modeDivider}>/</p>
+          <a onClick={this.toggleDarkMode}className={`${style.mode} ${darkMode ? style.modeSelected : null}`}>dark side</a>
+        </div>
         <Link to={nextPage} spy={true} smooth={true} duration={500} className={style.nextPage}>{nextText}</Link>
         <Element name='layer-1' className="element">
-          <Landing />
+          <Landing darkMode={darkMode} />
         </Element>
         <Element name='layer-2' className="element">
-          <Education />
+          <Education darkMode={darkMode} />
         </Element>
         <Element name='layer-3' className="element">
-          <Experience />
+          <Experience darkMode={darkMode} />
         </Element>
         <Element name='layer-4' className="element">
-          <Projects />
+          <Projects darkMode={darkMode} />
         </Element>
         <Element name='layer-5' className="element">
-          <Contact />
+          <Contact darkMode={darkMode} />
         </Element>
       </Layout>
     )

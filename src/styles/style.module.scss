@@ -5,6 +5,7 @@
 $primary: #303336;
 $secondary: #707070;
 $white: #fff;
+$darkGrey: #333;
 
 $text: #fff;
 $darkText: #333;
@@ -89,6 +90,26 @@ a {
   }
 }
 
+.modeToggle {
+  position: fixed;
+  right: 50px;
+  top: 25px;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.modeDivider {
+  margin: 0 15px;
+}
+
+.mode {
+  cursor: pointer;
+}
+
+.modeSelected {
+  text-decoration: underline;
+}
+
 .nextPage {
   position: fixed;
   bottom: 50px;
@@ -125,30 +146,70 @@ a {
 
 .landing {
   background-color: $blue;
+
+  &.darkMode {
+    background: $darkGrey;
+    
+    h1 {
+      color: $blue;
+    }
+  }
 }
 
 /* Educations */
 
 .educations {
   background-color: $orange;
+
+  &.darkMode {
+    background: $darkGrey;
+    
+    h2, p, a {
+      color: $orange;
+    }
+  }
 }
 
 /* Experience */
 
 .experience {
   background-color: $red;
+
+  &.darkMode {
+    background: $darkGrey;
+
+    h2, p, a {
+      color: $red;
+    }
+  }
 }
 
 /* Projects */
 
 .projects {
   background-color: $turqoise;
+
+  &.darkMode {
+    background: $darkGrey;
+
+    h2, p, a {
+      color: $turqoise;
+    }
+  }
 }
 
 /* Contact */
 
 .contact {
   background-color: $green;
+
+  &.darkMode {
+    background: $darkGrey;
+
+    h2, p, a {
+      color: $green;
+    }
+  }
 
   .links {
     display: flex;
