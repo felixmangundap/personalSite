@@ -1,37 +1,16 @@
 /* Stylesheets */
 
-/* Colour Palette */
-
-$primary: #303336;
-$secondary: #707070;
-$white: #fff;
-$darkGrey: #333;
-
-$text: #fff;
-$darkText: #333;
-
-$blue: #68C7EC;
-$purple: #BFABE6;
-$red: #F59890;
-$orange: #F7B26A;
-$turqoise: #69CDCF;
-$yellow: #F7D56B;
-$green: #AED677;
-
-$blue1: #00A0DC;
-$blue2: #34B3E4;
-$blue3: #68C7EC;
-$blue4: #9BDAF3;
-$blue5: #CFEDFB;
+@use './color.module.scss' as *;
 
 /* Structure */
 
-.main {
-  height: 100vh;
+html, .main {
+  background-color: $bg;
 }
 
 /* Typography */
 
+div,
 h1,
 h2,
 h3,
@@ -39,14 +18,15 @@ h4,
 h5,
 p,
 a {
-  font-family: 'Open Sans';
+  font-family: 'Cabin';
   font-weight: normal;
   margin: 0;
   color: $text;
-  letter-spacing: 4px;
 }
 
 a {
+  color: $primary;
+  text-decoration: none;
   &:hover {
     opacity: 0.8;
   }
@@ -78,145 +58,9 @@ a {
   }
 }
 
-.logo {
-  width: 65px;
-  position: fixed;
-  left: 50px;
-  top: 100px;
-
-  @media (max-width: 767px) {
-    left: 25px;
-    top: 75px;
-  }
-}
-
-.modeToggle {
-  position: fixed;
-  right: 50px;
-  top: 25px;
-  display: flex;
-  flex-flow: row nowrap;
-}
-
-.modeDivider {
-  margin: 0 15px;
-}
-
-.mode {
-  cursor: pointer;
-}
-
-.modeSelected {
-  text-decoration: underline;
-}
-
-.nextPage {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  text-transform: lowercase;
-  padding: 10px 15px;
-  cursor: pointer;
-
-  @media (max-width: 767px) {
-    right: 25px;
-    bottom: 25px;
-  }
-}
-
-/* Layer */
-
-.layer {
-  height: 100vh;
-  padding: 50px;
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-
-  @media (max-width: 767px) {
-    padding: 25px;
-  }
-
-  h2 {
-    margin-bottom: 15px;
-  }
-}
-
-/* Landing */
-
-.landing {
-  background-color: $blue;
-
-  &.darkMode {
-    background: $darkGrey;
-    
-    h1 {
-      color: $blue;
-    }
-  }
-}
-
-/* Educations */
-
-.educations {
-  background-color: $orange;
-
-  &.darkMode {
-    background: $darkGrey;
-    
-    h2, p, a {
-      color: $orange;
-    }
-  }
-}
-
-/* Experience */
-
-.experience {
-  background-color: $red;
-
-  &.darkMode {
-    background: $darkGrey;
-
-    h2, p, a {
-      color: $red;
-    }
-  }
-}
-
-/* Projects */
-
-.projects {
-  background-color: $turqoise;
-
-  &.darkMode {
-    background: $darkGrey;
-
-    h2, p, a {
-      color: $turqoise;
-    }
-  }
-}
-
-/* Contact */
-
-.contact {
-  background-color: $green;
-
-  &.darkMode {
-    background: $darkGrey;
-
-    h2, p, a {
-      color: $green;
-    }
-  }
-
-  .links {
-    display: flex;
-    flex-flow: row wrap;
-
-    .link {
-      margin-right: 15px;
-    }
-  }
+.footer {
+  margin-top: 3em;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
 }

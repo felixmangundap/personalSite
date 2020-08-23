@@ -1,0 +1,157 @@
+/* Experience */
+
+@use './color.module.scss' as *;
+
+.main {
+  padding: 25px;
+  margin-bottom: 100px;
+  display: grid;
+  place-items: center;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.experienceList {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  height: 25px;
+  width: 2px;
+  margin: auto;
+  background: $primary;
+}
+
+.boxes {
+  width: 750px;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.infoBox {
+  position: relative;
+  width: 100%;
+  padding: 25px;
+  margin-bottom: 25px;
+  background: $bg;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+}
+
+.boxTitle {
+  // text-align: right;
+  font-size: 1.2em;
+  color: $primary;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.boxPhoto {
+  width: auto;
+  height: 100%;
+  border-radius: 25px;
+}
+
+.boxImg {
+  object-fit: cover;
+  border-radius: 25px;
+  margin: 0;
+}
+
+.info {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+
+.paragraph {
+  width: 100%;
+  word-wrap: break-word;
+}
+
+.arsenalBox {
+  position: relative;
+  padding: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  background: $bg;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+}
+
+.arsenal {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.iconLink {
+  margin-right: 15px;
+  font-size: 1.5em;
+  // color: $primary;
+}
+
+.divider {
+  margin: 0 15px;
+}
+
+.primary {
+  color: $primary;
+}
+
+.gamesBox {
+  flex-grow: 1;
+  position: relative;
+  padding: 25px;
+  margin-bottom: 25px;
+  background: $bg;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+}
+
+.sportsBox {
+  width: 100%;
+  position: relative;
+  padding: 25px;
+  background: $bg;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+}
+
+@media (max-width: 768px) {
+  .boxes, .arsenalBox, .gamesBox {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .arsenalBox {
+    margin-bottom: 25px;
+  }
+
+  .arsenal {
+    flex-flow: row wrap;
+    align-items: center;
+    // justify-content: center;
+  }
+
+  .iconLink {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+  }
+
+  .divider {
+    margin: 0 15px 10px 15px;
+  }
+}

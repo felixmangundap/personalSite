@@ -1,0 +1,29 @@
+/* Experience */
+
+@use './color.module.scss' as *;
+
+.main {
+  padding: 25px;
+  // margin-bottom: 10em;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.projectList {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 768px) {
+  .projectList {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+  }
+}

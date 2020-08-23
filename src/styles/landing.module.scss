@@ -1,0 +1,202 @@
+/* Experience */
+
+@use './color.module.scss' as *;
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  // justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.leftContainer {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.title {
+  font-size: 2em;
+  margin-bottom: 20px;
+
+  // height: 50px;
+  padding: 10px 25px;
+  background: $bg;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+
+  // font-weight: 300;
+  // background: linear-gradient(to right, #FF5F6D, #FFC371);
+  // -webkit-background-clip: text;
+  // -webkit-text-fill-color: transparent;
+}
+
+.links {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.link {
+  height: 50px;
+  width: 50px;
+  background: $bg;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+  margin-right: 15px;
+  font-size: 1.25em;
+  display: grid;
+  place-items: center;
+}
+
+.linkButton {
+  position: relative;
+  height: 50px;
+  padding: 10px 25px;
+  background: $bg;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+  margin-right: 15px;
+  font-size: 1.25em;
+  display: grid;
+  place-items: center;
+}
+
+.primary {
+  color: $primary;
+}
+
+.rightContainer {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.polaroidContainer {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  display: grid;
+  place-items: center;
+}
+
+.polaroidTitle {
+  font-size: 1.25em;
+  font-weight: 300;
+  color: $primary;
+
+  // height: 50px;
+  // padding: 10px 25px;
+  // background: $bg;
+  // border-radius: 25px;
+  // border: 1px solid rgba(255, 255, 255, .25);
+  // box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+}
+
+.abs {
+  position: absolute;
+}
+
+.right1 {
+  transform: rotate(2.5deg);
+}
+
+.left1 {
+  transform: rotate(-4deg);
+}
+
+.right2 {
+  transform: rotate(7deg);
+}
+
+.left2 {
+  transform: rotate(-9deg);
+}
+
+.circleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleOut {
+  @include  neumorphism-inner-light;
+
+  height: 700px;
+  width: 700px;
+  border-radius: 350px;
+  background: $bg;
+}
+
+.circleIn {
+  @include  neumorphism-light;
+
+  height: 600px;
+  width: 600px;
+  border-radius: 300px;
+  background: $bg;
+
+  position: absolute;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-flow: column-reverse nowrap;
+    justify-content: flex-end;
+  }
+
+  .title {
+    width: 100%;
+    text-align: center;
+  }
+
+  .links {
+    justify-content: space-between;
+  }
+
+  .linkButton {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .link {
+    margin-right: 0;
+  }
+
+  .leftContainer, .rightContainer {
+    width: auto;
+    height: auto;
+  }
+
+  .leftContainer {
+    padding: 25px;
+  }
+
+  .rightContainer {
+    margin-bottom: 25px;
+  }
+
+  .polaroidContainer {
+    height: 450px;
+  }
+
+  .experienceCardContainer {
+    width: 100%;
+  }
+
+  .polaroidTitle {
+    font-size: 1em;
+  }
+}

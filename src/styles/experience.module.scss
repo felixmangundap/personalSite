@@ -1,0 +1,35 @@
+/* Experience */
+
+@use './color.module.scss' as *;
+
+.main {
+  padding: 25px;
+  margin-bottom: 100px;
+}
+
+.title {
+  font-size: 2em;
+  font-weight: 500;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.experienceList {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divider {
+  height: 25px;
+  width: 2px;
+  margin: auto;
+  background: $primary;
+}
+
+@media (max-width: 768px) {
+  .experienceCardContainer {
+    width: 100%;
+  }
+}

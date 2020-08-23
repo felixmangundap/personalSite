@@ -1,0 +1,26 @@
+/* Colour Palette */
+
+$primary: #ff7777;
+$secondary: #eee;
+
+$gradient1: #e1eec3;
+$gradient2: #ff7777;
+
+$white: #fff;
+$darkGrey: #333;
+
+$text: #777;
+$darkText: #333;
+
+$bg: #eee;
+
+
+@mixin neumorphism-light {
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+}
+
+@mixin neumorphism-inner-light {
+  border: 1px solid rgba(255, 255, 255, .25);
+  box-shadow: inset 4px 4px 16px #dddddd, inset -4px -4px 16px #ffffff;
+}

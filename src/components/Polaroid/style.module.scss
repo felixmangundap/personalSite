@@ -1,0 +1,52 @@
+
+@use '../../styles/color.module.scss' as *;
+
+.polaroid {
+  padding: 25px 25px 0 25px;
+  background: $bg;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, .25);
+  // box-shadow: 4px 4px 16px #dddddd, -4px -4px 16px #ffffff;
+  box-shadow: 2px 2px 4px #dddddd;
+}
+
+.boxPhoto {
+  width: 400px;
+  height: 400px;
+}
+
+.boxImg {
+  object-fit: cover;
+}
+
+.black {
+  color: $darkGrey;
+}
+
+.title {
+  font-size: 1.25em;
+  font-weight: 700;
+  font-family: 'Caveat';
+}
+
+.location {
+  font-size: 1.25em;
+  font-family: 'Caveat';
+  color: $primary;
+}
+
+.info {
+  height: 100px;
+  padding: 25px 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .boxPhoto {
+    height: 200px;
+    width: 200px;
+  }
+}
