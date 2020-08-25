@@ -4,15 +4,15 @@ import AwesomeDebouncePromise from 'awesome-debounce-promise';
 // ES6 Imports
 import { Link, Element } from 'react-scroll';
 
-import Layout from './layout'
-import SEO from './seo'
-import Landing from './landing'
-import About from './about'
-import Experience from './experience'
-import Projects from './projects'
+import Layout from '../components/layout'
+import SEO from '../components/seo'
+import Landing from '../sections/landing'
+import About from '../sections/about'
+import Experience from '../sections/experience'
+import Projects from '../sections/projects'
+import Footer from '../sections/footer';
 
 import * as style from  '../styles/style.module.scss'
-import Footer from './footer';
 
 class IndexPage extends React.Component {
   state = {
